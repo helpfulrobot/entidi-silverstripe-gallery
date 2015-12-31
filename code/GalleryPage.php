@@ -1,6 +1,7 @@
 <?php
 
-class GalleryPage extends CarouselPage {
+class GalleryPage extends CarouselPage
+{
 
     private static $icon = 'gallery/img/image.png';
 
@@ -10,7 +11,8 @@ class GalleryPage extends CarouselPage {
     );
 
 
-    public function getSettingsFields() {
+    public function getSettingsFields()
+    {
         $fields = parent::getSettingsFields();
 
         // Promove the CarouselPage settings to GalleryPage
@@ -30,7 +32,8 @@ class GalleryPage extends CarouselPage {
         return $fields;
     }
 
-    public function getCMSValidator() {
+    public function getCMSValidator()
+    {
         return new RequiredFields(
             'Width',
             'Height',
@@ -40,5 +43,6 @@ class GalleryPage extends CarouselPage {
     }
 }
 
-class GalleryPage_Controller extends CarouselPage_Controller {
+class GalleryPage_Controller extends CarouselPage_Controller
+{
 }
